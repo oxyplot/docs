@@ -6,7 +6,7 @@
 
 3. Install Sphinx: `easy_install -U Sphinx`
 
-4. Build the docs after you edit them. There should be NO errors or warnings: `make.bat html`
+4. Build the docs: `make.bat html`
 
 # ReStructured Text
 
