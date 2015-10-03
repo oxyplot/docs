@@ -28,7 +28,6 @@ Content
    guidelines/index.rst
    export/index.rst
    extras/index.rst
-   contribute/index.rst
 
 
 Indices and tables
