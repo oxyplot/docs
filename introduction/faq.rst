@@ -19,3 +19,7 @@ All solutions contain an "ExampleBrowser" project that can be used to render the
 
 The example library contains platform independent code and the source can be found in `~Source\\Examples\\ExampleLibrary\\Examples <https://github.com/oxyplot/oxyplot/tree/develop/Source/Examples/ExampleLibrary/Examples>`_. See also the platform specific examples in the `Examples <https://github.com/oxyplot/oxyplot/tree/develop/Source/Examples>`_ folder.
 
+Why are the plots not showing up in my Xamarin.Forms project?
+-------------------------------------------------------------
+
+Did you forget to add a reference to the OxyPlot platform projects and initialize the renderers? See `getting started <../getting-started/hello-xamarin-forms>`_ for more information.

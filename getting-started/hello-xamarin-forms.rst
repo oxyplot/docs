@@ -15,7 +15,7 @@ Start Visual Studio and select the blank Xamarin.Forms app template.
 Update and add references
 -------------------------
 
-Update the ``Xamarin.Forms`` NuGet packages to the latest version (at least version 1.3.1).
+Update the ``Xamarin.Forms`` NuGet packages to the latest version.
 
 Add the ``OxyPlot.Xamarin.Forms`` NuGet package in both the portable and platform specific projects.
 
@@ -26,7 +26,7 @@ You need to initialize the OxyPlot renderers by adding the following call just b
 
 - iOS (Unified API): ``OxyPlot.Xamarin.Forms.Platform.iOS.Forms.Init();``
 - Android: ``OxyPlot.Xamarin.Forms.Platform.Android.Forms.Init();``
-- WinPhone: ``OxyPlot.Xamarin.Forms.Platform.WinPhone.Forms.Init();``
+- Windows Phone: ``OxyPlot.Xamarin.Forms.Platform.WP8.Forms.Init();``
 
 Add the PlotView to a page (in code)
 ------------------------------------
