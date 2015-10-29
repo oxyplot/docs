@@ -35,7 +35,7 @@ property.
 
 - If the ``Mapping`` property is set, each element in the collection
   will be transformed
-- If the collection is a list of ``DataPoint``, it will be used with no
+- If the collection is a list of ``DataPoint``, or a type that implements ``IDataPointProvider``, it will be used with no
   mapping
 - If the ``DataFieldX`` and ``DataFieldY`` properties are set, each
   element of the collection will be reflected to create a data point
