@@ -17,7 +17,9 @@ The arguments are specific to each class.
 || Class || ~{0} || ~{1} || Examples |
 | LineSeries | X | Y | `"{0:0.00} {1:0.00}"` |
 
-The format string can also contain formatting codes for properties in the nearest item of the hit. Use the property name inside the curly braces: `{MyProperty:0.00}`
+If you need to include extra information in the tracker beyond the standard parameters (e.g. series name, x and y values), you can use the ``Series.ItemSource`` property to populate the data points (see e.g. `LineSeries <../../models/series/LineSeries.html>`_ for more details).
+The format string can also contain formatting codes for properties in the ``ItemSource`` list item that defines the data point closest to the tracker hit.
+Use the property name inside the curly braces: `{MyProperty:0.00}`.
 
 The culture of the tracker format string can be set in the `Culture` property in the `PlotModel`. The default culture is the current UI culture. 
 
@@ -54,6 +56,9 @@ This class contains data about the current hit of the tracker:
 | `YAxis` | the current y axis.|
 | `Item` | the current item if an `ItemsSource` was used to generate the data.|
 | `Text` | the text to be shown in the tracker. If this property is set, the series' `TrackerFormatString` will not be used.|
+ 
+The TrackerHitResult for the current tracker state can be obtained by handling the PlotModel.TrackerChanged event.
+However, this event occurs after the text has been set on the tracker UI, so you cannot use this event handler to set custom tracker text.
  
 Tracker definitions
 ===================
