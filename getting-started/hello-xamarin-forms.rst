@@ -22,11 +22,11 @@ Add the ``OxyPlot.Xamarin.Forms`` NuGet package in both the portable and platfor
 Initialize renderers
 --------------------
 
-You need to initialize the OxyPlot renderers by adding the following call just before ``Xamarin.Forms.Forms.Init()``:
+You need to initialize the OxyPlot renderers by adding the following call just after ``Xamarin.Forms.Forms.Init()``:
 
-- iOS (Unified API): ``OxyPlot.Xamarin.Forms.Platform.iOS.Forms.Init();``
-- Android: ``OxyPlot.Xamarin.Forms.Platform.Android.Forms.Init();``
-- Windows Phone: ``OxyPlot.Xamarin.Forms.Platform.WP8.Forms.Init();``
+- iOS (Unified API): ``OxyPlot.Xamarin.Forms.Platform.iOS.PlotViewRenderer.Init();``
+- Android: ``OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();``
+- Windows Phone: ``OxyPlot.Xamarin.Forms.Platform.WP8.PlotViewRenderer.Init();``
 
 Add the PlotView to a page (in code)
 ------------------------------------
