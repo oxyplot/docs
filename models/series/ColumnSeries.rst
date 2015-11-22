@@ -35,3 +35,8 @@ Example
 .. sourcecode:: csharp
 
     var model = new PlotModel { Title = "ColumnSeries" };
+    // A ColumnSeries requires a CategoryAxis on the x-axis.
+    model.Axes.Add(new CategoryAxis());
+    var series = new ColumnSeries();
+    model.Series.Add(series);
+    series.Items.Add(new ColumnItem(100));
