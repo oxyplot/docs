@@ -28,6 +28,13 @@ Copy to clipboard
     {
         var pngExporter = new PngExporter();
         pngExporter.Export(plotModel, stream, 600, 400, Brushes.White);
+        
+        var bitmap = new BitmapImage();
+        bitmap.BeginInit();
+        bitmap.StreamSource = stream;
+        bitmap.CacheOption = BitmapCacheOption.OnLoad;
+        bitmap.EndInit();
+        bitmap.Freeze();
+            
+        Clipboard.SetImage(bitmap);
     }
-    
-    // TODO : write content of stream to clipboard
