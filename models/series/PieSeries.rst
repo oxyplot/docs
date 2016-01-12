@@ -30,60 +30,42 @@ Example
 
 .. sourcecode:: csharp
 
+    using OxyPlot;
+    using OxyPlot.Series;
+    
     namespace ExampleLibrary
     {
-        using OxyPlot;
-    
-        using OxyPlot.Series;
-    
-        [Examples("PieSeries")]
-        public static class PieSeriesExamples
+        
+        public class PieViewModel
         {
-            [Example("PieSeries")]
-            public static PlotModel PieSeries()
+            private PlotModel modelP1;
+            public PieViewModel()
             {
-                return CreateExample();
-            }
-    
-            [Example("PieSeries with inside label color")]
-            public static PlotModel InsideLabelColor()
-            {
-                var model = CreateExample();
-                var series = (PieSeries)model.Series[0];
-                series.InsideLabelColor = OxyColors.White;
-                return model;
-            }
-    
-            private static PlotModel CreateExample()
-            {
-                var model = new PlotModel { Title = "World population by continent" };
-    
-                var ps = new PieSeries
-                {
-                    StrokeThickness = 2.0,
-                    InsideLabelPosition = 0.8,
-                    AngleSpan = 360,
-                    StartAngle = 0
-                };
-    
-                // http://www.nationsonline.org/oneworld/world_population.htm
-                // http://en.wikipedia.org/wiki/Continent
-                ps.Slices.Add(new PieSlice("Africa", 1030) { IsExploded = true });
-                ps.Slices.Add(new PieSlice("Americas", 929) { IsExploded = true });
-                ps.Slices.Add(new PieSlice("Asia", 4157));
-                ps.Slices.Add(new PieSlice("Europe", 739) { IsExploded = true });
-                ps.Slices.Add(new PieSlice("Oceania", 35) { IsExploded = true });
+                modelP1 = new PlotModel { Title = "Pie Sample1" };
                 
-                model.Series.Add(ps);
-                return model;
+                dynamic seriesP1 = new PieSeries { StrokeThickness = 2.0, InsideLabelPosition = 0.8, AngleSpan = 360, StartAngle = 0 };
+                
+                seriesP1.Slices.Add(new PieSlice("Africa", 1030) { IsExploded = false, Fill = OxyColors.PaleVioletRed });
+                seriesP1.Slices.Add(new PieSlice("Americas", 929) { IsExploded = true });
+                seriesP1.Slices.Add(new PieSlice("Asia", 4157) { IsExploded = true });
+                seriesP1.Slices.Add(new PieSlice("Europe", 739) { IsExploded = true });
+                seriesP1.Slices.Add(new PieSlice("Oceania", 35) { IsExploded = true });
+                
+                modelP1.Series.Add(seriesP1);
+                
             }
+            
+            public PlotModel Model1
+            {
+                get { return modelP1; }
+                set { modelP1 = value; }
+            }
+            
         }
-    }    
-
+        
+    }
 
 .. sourcecode:  VB
-
-    Create class in a file called PieViewModel.vb
 
     Imports OxyPlot
     Imports OxyPlot.Series
