@@ -23,7 +23,7 @@ You need references to the OxyPlot and OxyPlot.Wpf assemblies. The easiest way t
 
 .. image:: wpf-add-reference.png
 
-In the "Manage NuGet packages" dialog, search for "OxyPlot" and select the "OxyPlot.Wpf" package:
+In the "Manage NuGet packages" dialog, search for "OxyPlot" (activate the Include prerelease option) and select the "OxyPlot.Wpf" package:
 
 .. image:: wpf-install-package.png
 
@@ -31,7 +31,7 @@ You can also use the `Package Manager Console <http://docs.nuget.org/docs/start-
 
 .. sourcecode:: bat
 
-    PM> Install-Package OxyPlot.Wpf
+    PM> Install-Package OxyPlot.Wpf -Pre 
 
 Create a view model
 -------------------
@@ -73,6 +73,7 @@ Create the view
 ---------------
 
 Define the namespace in the ``Window`` element, set the ``DataContext`` and add a ``PlotView`` control:
+To add a PlotView control, Go in ``Choose Items...`` in the Toolbox and Browse for the OxyPlot.Wpf.dll file. If you used NuGet, it should be located in your Project Folder /bin/Debug. Once selected, only check the PlotView file.
 
 .. sourcecode:: xml
 
