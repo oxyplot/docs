@@ -26,15 +26,7 @@ Copy to clipboard
 
     using (var stream = new MemoryStream())
     {
-        var pngExporter = new PngExporter();
-        pngExporter.Export(plotModel, stream, 600, 400, Brushes.White);
-        
-        var bitmap = new BitmapImage();
-        bitmap.BeginInit();
-        bitmap.StreamSource = stream;
-        bitmap.CacheOption = BitmapCacheOption.OnLoad;
-        bitmap.EndInit();
-        bitmap.Freeze();
-            
-        Clipboard.SetImage(bitmap);
+        var bitmap = OxyPlot.Wpf.PngExporter.ExportToBitmap(
+					Model, (int)Model.Width, (int)Model.Height, OxyColors.White);
+		Clipboard.SetImage(bitmap);
     }
