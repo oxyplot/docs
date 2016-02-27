@@ -2,31 +2,33 @@
 Export to PNG
 =============
 
-.. note:: This section is under construction. Please contribute!
+The PNG export functionality is located in the platform specific libraries (OxyPlot.Wpf, OxyPlot.WindowsForms).
+Note that PNG export is not yet supported on all platforms.
 
-The PNG exporters are implemented in the platform specific libraries (OxyPlot.Wpf, OxyPlot.WindowsForms etc.).
-
-
-Write a PNG file
-----------------
-
-.. code:: csharp
-
-    using (var stream = File.Create(fileName))
-    {
-        var pngExporter = new PngExporter();
-        pngExporter.Export(plotModel, stream, 600, 400, Brushes.White);
-    }
-
-
-Copy to clipboard
+Write to a stream
 -----------------
 
 .. code:: csharp
 
-    using (var stream = new MemoryStream())
-    {
-        var bitmap = OxyPlot.Wpf.PngExporter.ExportToBitmap(
-					Model, (int)Model.Width, (int)Model.Height, OxyColors.White);
-		Clipboard.SetImage(bitmap);
-    }
+    var stream = new MemoryStream();
+    var pngExporter = new PngExporter { Width = 600, Height = 400, Background = OxyColors.White };
+    pngExporter.Export(plotModel, stream);
+
+
+Write to a file
+---------------
+
+.. code:: csharp
+
+    var pngExporter = new PngExporter { Width = 600, Height = 400, Background = OxyColors.White };
+    pngExporter.ExportToFile(plotModel, fileName);
+
+
+Copy to the clipboard
+---------------------
+
+.. code:: csharp
+
+    var pngExporter = new PngExporter { Width = 600, Height = 400, Background = OxyColors.White };
+    var bitmap = pngExporter.ExportToBitmap(plotModel);
+    Clipboard.SetImage(bitmap);

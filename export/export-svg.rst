@@ -10,7 +10,7 @@ The plots can be exported to SVG by the `SvgExporter` in the OxyPlot core librar
 
     using (var stream = File.Create(fileName))
     {
-        var exporter = new SvgExporter() { Width = 600, Height = 400 };
+        var exporter = new SvgExporter { Width = 600, Height = 400 };
         exporter.Export(plotModel, stream);
     }
 

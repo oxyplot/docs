@@ -17,8 +17,8 @@ OxyPlot Pdf writer
 
     using (var stream = File.Create(fileName))
     {
-        var pdfExporter = new PdfExporter();
-        pdfExporter.Export(plotModel, stream, 600, 400);
+        var pdfExporter = new PdfExporter { Width = 600, Height = 400 };
+        pdfExporter.Export(plotModel, stream);
     }
 
 See also the section :doc:`../extras/portable-documents` about the underlying Pdf writer.
