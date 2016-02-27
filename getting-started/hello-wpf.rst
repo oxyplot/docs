@@ -5,7 +5,7 @@ WPF
 .. note:: This section is under construction. Please contribute!
 
 
-This example shows how to create a WPF application where the content of the plot is defined in code.
+This example shows how to create a WPF application with a ``PlotView`` control, where the content of the plot is defined in code as a ``PlotModel``. If you want to define the content of the plot in XAML, see :doc:`hello-wpf-xaml`.
 
 
 Create project
@@ -31,7 +31,7 @@ You can also use the `Package Manager Console <http://docs.nuget.org/docs/start-
 
 .. sourcecode:: bat
 
-    PM> Install-Package OxyPlot.Wpf
+    PM> Install-Package OxyPlot.Wpf -Pre
 
 
 Create a view model

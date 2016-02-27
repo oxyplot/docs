@@ -5,7 +5,7 @@ WPF (XAML)
 .. note:: This section is under construction. Please contribute!
 
 
-This example shows how to create a WPF application where the content of the plot is defined in XAML.
+This example shows how to create a WPF application with a ``Plot`` control, where the content of the plot (axes, series, annotations) is defined in XAML.
 
 
 Create project
@@ -72,8 +72,7 @@ Then create a class that defines the data to be plotted.
 Create the view
 ---------------
 
-Define the namespace in the ``Window`` element, set the ``DataContext`` and add a ``PlotView`` control:
-To add a PlotView control, Go in ``Choose Items...`` in the Toolbox and Browse for the OxyPlot.Wpf.dll file. If you used NuGet, it should be located in your Project Folder /bin/Debug. Once selected, only check the PlotView file.
+Define the namespace in the ``Window`` element, set the ``DataContext`` and add a ``Plot`` control:
 
 .. sourcecode:: xml
 
@@ -93,6 +92,8 @@ To add a PlotView control, Go in ``Choose Items...`` in the Toolbox and Browse f
             </oxy:Plot>
         </Grid>
     </Window>
+
+If you want to add a ``Plot`` control in the design view, press ``Choose Items...`` in the Toolbox and browse for the ``OxyPlot.Wpf.dll`` file. If you used NuGet, it should be located in the `packages` folder in your solution folder.
 
 The application should now look like this:
 
