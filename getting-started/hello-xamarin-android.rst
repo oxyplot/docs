@@ -69,7 +69,6 @@ Bind to a PlotModel
 		return plotModel;
 	}
 
-
 References
 ----------
 
