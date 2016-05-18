@@ -16,10 +16,10 @@ Add a PlotView control
 In your layout:
 
 .. sourcecode:: xml
-	<OxyPlot.Xamarin.Android.PlotView
-            android:id="@+id/plot_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <OxyPlot.Xamarin.Android.PlotView
+        android:id="@+id/plot_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 then in your Activity/Fragment code:
 
