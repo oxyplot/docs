@@ -13,10 +13,29 @@ Add the ``OxyPlot.Xamarin.Android`` NuGet package to the project. References to 
 
 Add a PlotView control
 ----------------------
+In your layout:
+
+.. sourcecode:: xml
+	<OxyPlot.Xamarin.Android.PlotView
+            android:id="@+id/plot_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+then in your Activity/Fragment code:
+
+.. sourcecode:: csharp
+
+    using OxyPlot.Xamarin.Android;
+    ...
+    PlotView view = FindViewById<PlotView>(Resource.Id.plot_view);
 
 
 Bind to a PlotModel
 -------------------
+
+.. sourcecode:: csharp
+			
+     view.Model = CreatePlotModel();
 
 
 References
