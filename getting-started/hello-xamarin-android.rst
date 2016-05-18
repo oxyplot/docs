@@ -27,7 +27,7 @@ then in your Activity/Fragment code:
 .. sourcecode:: csharp
 
     using OxyPlot.Xamarin.Android;
-    ...
+    /*...*/
     PlotView view = FindViewById<PlotView>(Resource.Id.plot_view);
 
 
@@ -39,7 +39,7 @@ Bind to a PlotModel
     using OxyPlot;
     using OxyPlot.Axes;
     using OxyPlot.Series;
-    ...		
+    /*...*/		
     view.Model = CreatePlotModel();
         
     private PlotModel CreatePlotModel()
