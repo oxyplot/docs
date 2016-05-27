@@ -46,5 +46,11 @@ Example
 .. code:: csharp
 
     var model = new PlotModel { Title = "DateTimeAxis" };
-    model.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -20, Maximum = 80});
-    model.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -10, Maximum = 10});
+    
+    var startDate = DateTime.Now.AddDays(-10);
+    var endDate = DateTime.Now;
+    
+    var minValue = DateTimeAxis.ToDouble(startDate);
+    var maxValue = DateTimeAxis.ToDouble(endDate);
+    
+    model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d"});
