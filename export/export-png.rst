@@ -27,6 +27,8 @@ Write to a file
 Copy to the clipboard
 ---------------------
 
+*Warning: Calling the ExportToBitmap method often in a very short period may result in high memory usage.*
+
 .. code:: csharp
 
     var pngExporter = new PngExporter { Width = 600, Height = 400, Background = OxyColors.White };
