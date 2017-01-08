@@ -11,7 +11,7 @@ This example shows how to create a Windows Phone Silverlight app.
 Create project
 --------------
 
-Start Visual Studio and select "FILE -> New -> Project...". Select "Store Apps -> Windows Phone Apps -> Blank App (Windows Phone Silverlight)" to 
+Start Visual Studio and select "FILE -> New -> Project...". Select "Windows -> Windows 8 -> Windows Phone -> Blank App (Windows Phone Silverlight)" to 
 create a new projects for Windows Phone Silverlight.
 
 
@@ -20,14 +20,14 @@ Add references
 
 You need references to the `OxyPlot` and `OxyPlot.WP8` assemblies. The easiest way to do this is to right click on the "References" item in the Solution Explorer and select "Manage NuGet Packages..." (this requires that the "NuGet Package Manager" extension is installed).
 
-In the "Manage NuGet packages" dialog, search for "oxyplot windows phone" in the top-right search textbox. 
-Select the "OxyPlot for Windows Phone Silverlight apps" package and click install.
+In the "Manage NuGet packages" dialog, search for "oxyplot.windows" in the top-right search textbox. 
+Select the "OxyPlot.Windows" package and click install.
 
 You can also use the `Package Manager Console <http://docs.nuget.org/docs/start-here/using-the-package-manager-console>`_ to install the package:
 
 .. sourcecode:: bat
 
-    PM> Install-Package OxyPlot.WP8
+    PM> Install-Package OxyPlot.Windows
 
 
 Create a view model
@@ -92,6 +92,6 @@ Define the namespace in the ``PhoneApplicationPage`` element, set the ``DataCont
 
 The application should now look like this (on the Windows Phone emulator):
 
-.. image:: windows-phone-silverlight-app-example1.png
+.. image:: wp8-example1.png
 
 The source code can be found in the `HelloWorld\\WinPhoneApp1 <https://github.com/oxyplot/documentation-examples/tree/master/HelloWorld/WinPhoneApp1>`_ folder in the `documentation-examples <https://github.com/oxyplot/documentation-examples>`_ repository.

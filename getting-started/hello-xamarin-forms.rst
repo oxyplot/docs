@@ -17,7 +17,7 @@ Update and add references
 
 Update the ``Xamarin.Forms`` NuGet packages to the latest version.
 
-Add the ``OxyPlot.Xamarin.Forms`` NuGet package in both the portable and platform specific projects.
+Add the ``OxyPlot.Xamarin.Forms`` NuGet package in both the portable and platform specific projects. Tip: Use the "Manage NuGet packages for solution..." command when you install the package to a lot of projects.
 
 Initialize renderers
 --------------------
@@ -26,7 +26,10 @@ You need to initialize the OxyPlot renderers by adding the following call just a
 
 - iOS (Unified API): ``OxyPlot.Xamarin.Forms.Platform.iOS.PlotViewRenderer.Init();``
 - Android: ``OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();``
+- Universal Windows: ``OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();``
 - Windows Phone: ``OxyPlot.Xamarin.Forms.Platform.WP8.PlotViewRenderer.Init();``
+
+Tip: Search for "Xamarin.Forms.Forms.Init()" in your solution to find all the places you need to add code.
 
 Add the PlotView to a page (in code)
 ------------------------------------
@@ -47,6 +50,8 @@ In the portable/shared app project, add the plot view to a page:
             },
         };
     }
+
+Note that the `VerticalOptions` and `HorizontalOptions` properties must be set, otherwise the plot view will have `0` width and height.
 
 Add the PlotView to a page (XAML)
 ---------------------------------

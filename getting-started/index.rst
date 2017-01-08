@@ -14,13 +14,13 @@ The following sections contain platform specific descriptions about how to get s
 
 .. toctree::
 
+    hello-uwp.rst
     hello-wpf.rst
     hello-wpf-xaml.rst
     hello-wpf-vb.rst
     hello-windows-forms.rst
     hello-silverlight.rst
     hello-windows-phone.rst
-    hello-windows-universal.rst
     hello-xamarin-ios.rst
     hello-xamarin-android.rst
     hello-xamarin-forms.rst
