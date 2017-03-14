@@ -13,7 +13,7 @@ Create project
 
 Start Visual Studio and select "FILE -> New -> Project...". Select "Windows -> Universal -> Blank App (Universal Windows)" to create new projects for Windows and Windows Phone:
 
-.. image:: windows-universal-app-new-project.png
+.. image:: uwp-new-project.png
 
 
 Add references
