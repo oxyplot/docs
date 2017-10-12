@@ -78,7 +78,8 @@ Define the namespace in the ``Window`` element, set the ``DataContext`` and add 
 
     <Window x:Class="WpfApplication2.MainWindow"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.org/wpf"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+            xmlns:oxy="http://oxyplot.org/wpf"
             xmlns:local="clr-namespace:WpfApplication2"
             Title="Example 2 (WPF)" Height="350" Width="525">
         <Window.DataContext>
