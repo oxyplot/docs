@@ -51,6 +51,7 @@ See `MSDN <http://msdn.microsoft.com/en-us/library/system.string.format(v=vs.110
     FunctionSeries.rst
     HeatMapSeries.rst
     HighLowSeries.rst
+    HistogramSeries.rst
     IntervalBarSeries.rst
     LineSeries.rst
     PieSeries.rst
