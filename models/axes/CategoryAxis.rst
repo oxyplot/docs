@@ -9,8 +9,22 @@ CategoryAxis
 Example
 -------
 
+This will add X-Axis line with 3 data point on it "Feb", "Mar", "Apr". In case you want it on the Y-Axis you can change the "Position" property to "AxisPosition.Left"
+
 .. code:: csharp
 
-    var model = new PlotModel { Title = "CategoryAxis" };
-    model.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -20, Maximum = 80});
-    model.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -10, Maximum = 10});
+    var model = new PlotModel { Title = "Category Axis" };
+    model.Axes.Add(new CategoryAxis { Position = AxisPosition.Bottom, ItemsSource = new string[] {"Feb","Mar","Apr"}});
+    
+    
+If you want to disable the zoom effect
+
+.. code:: csharp
+
+    model.Axes.Add(new CategoryAxis {IsZoomEnabled = false, Position = AxisPosition.Bottom, ItemsSource = new string[] {"Feb","Mar","Apr"}});
+    
+In case you do not want any scrolling along this axis, it can be done by using "AbsoluteMaximum" and "AbsoluteMinimum"
+
+.. code:: csharp
+
+    model.Axes.Add(new CategoryAxis {IsZoomEnabled = false, AbsoluteMaximum = 2, AbsoluteMinimum = 0, Position = AxisPosition.Bottom, ItemsSource = new string[] {"Feb","Mar","Apr"}});
