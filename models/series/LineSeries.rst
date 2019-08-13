@@ -77,4 +77,4 @@ Color
 
 The ``Color`` defines the color of the line. The default value is
 ``Automatic``. In this case the color will be set automatically from the
-colors specified in the ``DefaultColors```property of the parent ``PlotModel``.
+colors specified in the ``DefaultColors`` property of the parent ``PlotModel``.
