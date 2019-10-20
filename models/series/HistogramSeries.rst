@@ -26,15 +26,17 @@ Use the ``Items`` collection to add data to the ``HistogramSeries``:
 
 .. code:: csharp
 
-    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.0, rangeEnd: 0.5, area: 0.7));
-    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.5, rangeEnd: 0.75, area: 0.2));
-    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.75, rangeEnd: 1.0, area: 0.1));
+    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.0, rangeEnd: 0.5, area: 0.7, 14));
+    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.5, rangeEnd: 0.75, area: 0.2, 2));
+    histogramSeries1.Items.Add(new HistogramItem(rangeStart: 0.75, rangeEnd: 1.0, area: 0.1, 1));
 
-You can generate a list of ``HistogramItem`` from sample data with one of the static ``Collect`` methods provided by the ``HistogramHelpers`` class.
+You can generate a list of ``HistogramItem`` from sample data with the static ``Collect`` methods provided by the ``HistogramHelpers`` class.
 
 .. code:: csharp
 
-	histogramSeries1.Items.AddRange(HistogramHelpers.Collect(samples), samples.Min(), samples.Max(), 10, true);
+    var bins = HistogramHelpers.CreateUniformBins(samples.Min(), samples.Max(), 10);
+    var binningOptions = new BinningOptions(BinningOutlierMode.RejectOutliers, BinningIntervalType.InclusiveLowerBound, BinningExtremeValueMode.IncludeExtremeValues);
+    histogramSeries1.Items.AddRange(HistogramHelpers.Collect(samples, bins, binningOptions);
 
 Alternatively, you can specify a collection in the ``ItemsSource``
 property.
@@ -113,9 +115,14 @@ Here is an example making use of one of the ``HistogramHelpers.Collect`` methods
         StrokeColor = OxyColors.Black,
         StrokeThickness = 2
     };
-    histogramSeries.Items.AddRange(HistogramHelpers.Collect(samples, 0, max, 20, true));
+
+    var bins = HistogramHelpers.CreateUniformBins(0, max, 20);
+    var binningOptions = new BinningOptions(BinningOutlierMode.RejectOutliers, BinningIntervalType.InclusiveLowerBound, BinningExtremeValueMode.IncludeExtremeValues);
+    var items = HistogramHelpers.Collect(samples, bins, binningOptions);
+
+    histogramSeries.Items.AddRange(items);
     model.Series.Add(histogramSeries);
-            
+
     // plot ideal line for comparison
     var functionSeries = new FunctionSeries(x => Math.Pow(x, power) / integral, 0, max, 1000)
     {
