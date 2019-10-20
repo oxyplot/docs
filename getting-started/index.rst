@@ -19,7 +19,6 @@ The following sections contain platform specific descriptions about how to get s
     hello-wpf-xaml.rst
     hello-wpf-vb.rst
     hello-windows-forms.rst
-    hello-silverlight.rst
     hello-xamarin-ios.rst
     hello-xamarin-android.rst
     hello-xamarin-forms.rst
