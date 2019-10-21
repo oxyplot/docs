@@ -35,8 +35,8 @@ property.
 
 - If the ``Mapping`` property is set, each element in the collection
   will be transformed
-- If the collection is a list of ``DataPoint``, or a type that implements ``IDataPointProvider``, it will be used with no
-  mapping
+- If the collection is a list of ``DataPoint``, or a type that implements
+  ``IDataPointProvider``, it will be used with no mapping
 - If the ``DataFieldX`` and ``DataFieldY`` properties are set, each
   element of the collection will be reflected to create a data point
 
@@ -72,9 +72,43 @@ default value is ``true``.
 The ``TrackerKey`` property may be used to specify a `custom tracker <../tracker>`_.
 This makes it possible to use different trackers for each series.
 
-Color
------
+Color and Style
+---------------
 
 The ``Color`` defines the color of the line. The default value is
 ``Automatic``. In this case the color will be set automatically from the
 colors specified in the ``DefaultColors`` property of the parent ``PlotModel``.
+
+The ``LineStyle`` defines the line style. The default is ``Solid``. The
+``StrokeThickness`` defines the thickness of lines.
+
+The ``BrokenLineColor``, ``BrokenLineStyle``, and ``BrokenLineThickness`` properties
+define the color, style, and thickness of broken segments in the line, signalled by
+data points with an ``X`` or ``Y`` value of ``NaN``. 
+
+Markers can be included by specifying the ``MarkerType`` and ``MarkerStroke``. The
+default ``MarkerType`` is ``None``. If the ``Custom`` marker type is used, then a
+list of relative screen points in screen-space must be provided in the
+``MarkerOutline`` property.
+
+The ``MarkerStroke`` defines the stroke color of the markers. The ``MarkerFill``
+defines the fill color of the markers. The ``MarkerStrokeThickness`` defines the
+thickness of the lines in the marker. The ``MarkerSize`` defines the size of the
+markers.
+
+Example
+-------
+
+.. sourcecode:: csharp
+
+    var model = new PlotModel { Title = "LineSeries" };
+    var lineSeries = new LineSeries();
+    lineSeries.Points.Add(new DataPoint(0, 0));
+    lineSeries.Points.Add(new DataPoint(10, 4));
+    lineSeries.Points.Add(new DataPoint(30, 2));
+    lineSeries.Points.Add(new DataPoint(40, 12));
+    model.Series.Add(lineSeries);
+
+.. _tracker: ../tracker
+.. _MSDN: http://msdn.microsoft.com/en-us/library/system.string.format(v=vs.110).aspx
+.. _custom tracker: ../tracker
