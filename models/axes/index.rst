@@ -8,15 +8,15 @@ Axes
 
 OxyPlot contains the following axis types:
 
-LinearAxis  Represents a numerical axis with a linear scale. 
-LogarithmicAxis  Represents a numerical axis with a logarithmic scale. 
-DateTimeAxis  Represents a date/time axis based on `DateTime` values. 
-TimeSpanAxis  Represents a time axis based on `TimeSpan` values. 
-CategoryAxis  Represents an axis that displays categories (typically used for bar/column series). 
-LinearColorAxis  Represents an axis that displays a linear color scale. 
-RangeColorAxis  Represents an axis that displays a colors for specified ranges. 
-MagnitudeAxis  Represents the radial axis in polar plots 
-AngleAxis  Represents the angular axis in polar plots 
+- LinearAxis  Represents a numerical axis with a linear scale. 
+- LogarithmicAxis  Represents a numerical axis with a logarithmic scale. 
+- DateTimeAxis  Represents a date/time axis based on `DateTime` values. 
+- TimeSpanAxis  Represents a time axis based on `TimeSpan` values. 
+- CategoryAxis  Represents an axis that displays categories (typically used for bar/column series). 
+- LinearColorAxis  Represents an axis that displays a linear color scale. 
+- RangeColorAxis  Represents an axis that displays a colors for specified ranges. 
+- MagnitudeAxis  Represents the radial axis in polar plots 
+- AngleAxis  Represents the angular axis in polar plots 
   
 Position
 --------
