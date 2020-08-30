@@ -147,6 +147,10 @@ Labels
 The label format string may use the following arguments:
 
 - ``{0}`` the value (height) of the area
+- ``{1}`` the start of the range of the item
+- ``{2}`` the end of the range of the item
+- ``{3}`` the area in the item
+- ``{4}`` the count of the item
 - ``{PropertyX}`` the value of ``PropertyX`` in the item (extended format string syntax)
 
 The default label format string is ``null``, which prevents any label from being shown.
