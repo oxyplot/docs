@@ -55,8 +55,8 @@ Example
 	{
 		Color = OxyColors.Black,
 		LabelBackground = OxyColors.White,
-		ColumnCoordinates = yy,
-		RowCoordinates = xx,
+		ColumnCoordinates = xx,
+		RowCoordinates = yy,
 		Data = peaksData
 	};
 	model.Series.Add(cs);
