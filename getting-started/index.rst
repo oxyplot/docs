@@ -16,7 +16,6 @@ The following sections contain platform specific descriptions about how to get s
 
     hello-uwp.rst
     hello-wpf.rst
-    hello-wpf-xaml.rst
     hello-wpf-vb.rst
     hello-windows-forms.rst
     hello-xamarin-ios.rst
