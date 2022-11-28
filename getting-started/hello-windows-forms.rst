@@ -32,10 +32,27 @@ You can also use the `Package Manager Console <http://docs.nuget.org/docs/start-
     PM> Install-Package OxyPlot.WindowsForms
 
 
-Add a plot view
+Add to the Toolbox
+------------------
+
+You need to add the OxyPlot PlotView dll to the Toolbox. The fastest way to do this is to first build the project. This will populate the dll's from the nuget package pulled in earlier.
+
+.. image:: windows-forms-choose-items.png
+
+In the Toolbox, Right Click inside and select "Choose Items...". This will open the Choose Toolbox Items Window. It will take a little while to load all the .NET Framework Components. Once it has loaded them all click on the "Browse" Button below.
+
+.. image:: windows-forms-choose-toolbox-items.png
+
+Inside the File Select folder that opened, navigate to the "OxyPlot.WindowsForms.dll" and Open it. This will add the OxyPlot PlotView Control to the ".NET Framework Components" List.
+
+To enable the PlotView Component to show up in the Toolbox, in the filter enter in "OxyPlot" and it will narrow it down to just the Components added from the OxyPlot.WindowsForms.dll. Put a checkmark on the PlotView Component and it will now show up in your Toolbox.
+
+.. image:: windows-forms-plot-view.png
+
+Adding plot view
 ---------------
 
-TODO (add component to toolbox?)
+TODO (add explanation of adding PlotView to the Form)
 
 
 Create the plot model
