@@ -17,7 +17,7 @@ The arguments are specific to each class.
 || Class || ~{0} || ~{1} || Examples |
 | LineSeries | X | Y | `"{0:0.00} {1:0.00}"` |
 
-If you need to include extra information in the tracker beyond the standard parameters (e.g. series name, x and y values), you can use the ``Series.ItemSource`` property to populate the data points (see e.g. `LineSeries <../../models/series/LineSeries.html>`_ for more details).
+If you need to include extra information in the tracker beyond the standard parameters (e.g. series name, x and y values), you can use the ``Series.ItemSource`` property to populate the data points (see e.g. `LineSeries <../../latest/models/series/LineSeries.html>`_ for more details).
 The format string can also contain formatting codes for properties in the ``ItemSource`` list item that defines the data point closest to the tracker hit.
 Use the property name inside the curly braces: `{MyProperty:0.00}`.
 
