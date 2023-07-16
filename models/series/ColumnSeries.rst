@@ -4,6 +4,8 @@ ColumnSeries
 
 .. note:: This section is under construction. Please contribute!
 
+.. warning:: As of version 2.1.0, ``ColumnSeries`` was removed in favour of :doc:`BarSeries<BarSeries>`. View `#1402 <https://github.com/oxyplot/oxyplot/issues/1402>`_ for more information.
+
 A ``ColumnSeries`` shows the data set as vertical columns.
 
 .. image:: ColumnSeries.png
